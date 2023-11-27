@@ -22,5 +22,27 @@ const images = [
     }
 ];
 
+
+const sliderArticleEl = document.querySelector(`article.col-3`);
 const firstImageArticleEl = document.querySelector(`article.col-9`);
-const silderImageEl = document.createElement(`img`);
+let activeindex = 3;
+images.forEach((image)=>{
+    firstImageArticleEl.innerHTML +=
+    `<img src="${image.image}">
+            <h3 class="item-title">
+                ${image.title}
+            </h3>
+            <p class="item-description">
+                ${image.text}
+            </p>
+   `;
+//    ` ${image.image, image.title, image. text}`
+//    const newImageEl = document.createElement(`img`);
+//   newImageEl.src = images;
+//    firstImageArticleEl.appendChild(newImageEl);
+})
+// for(let i = 0; i < images.length; i++){
+//     const newImageEl = document.createElement(`img`);
+//     newImageEl.src = images;
+//     sliderArticleEl.appendChild(newImageEl);
+// }
